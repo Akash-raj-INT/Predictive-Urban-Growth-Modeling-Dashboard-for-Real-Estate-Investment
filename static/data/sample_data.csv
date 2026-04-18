@@ -1,0 +1,21 @@
+area_name,latitude,longitude,price_per_sqft,rental_yield,infra_score,listing_density
+Downtown Austin TX,30.267,-97.743,420,7.2,8.5,340
+Midtown Atlanta GA,33.784,-84.383,280,8.1,7.8,290
+Uptown Dallas TX,32.797,-96.806,310,7.5,8.1,310
+Wynwood Miami FL,25.801,-80.199,480,7.8,7.6,280
+SoHo New York NY,40.723,-74.003,1850,4.2,9.5,620
+Capitol Hill Seattle WA,47.624,-122.319,680,5.8,8.4,390
+Mission District SF CA,37.760,-122.415,1200,4.5,8.0,510
+NoDa Charlotte NC,35.231,-80.812,210,8.9,7.2,195
+River North Denver CO,39.762,-104.985,390,6.4,8.3,320
+East Nashville TN,36.175,-86.762,250,6.8,6.5,220
+Short North Columbus OH,39.978,-83.003,195,7.1,6.8,230
+Montrose Houston TX,29.745,-95.389,230,6.9,6.7,260
+Midtown Memphis TN,35.142,-90.049,140,9.2,5.5,180
+Eastside Detroit MI,42.354,-82.982,60,11.0,2.5,80
+North Tulsa OK,36.182,-95.991,75,10.2,3.0,95
+South Loop Chicago IL,41.850,-87.626,360,6.9,8.9,450
+Rust Belt Erie PA,42.129,-80.085,70,10.8,3.5,90
+Broad Ripple Indianapolis IN,39.867,-86.141,175,7.5,6.0,160
+West End Birmingham AL,33.515,-86.858,85,9.8,3.5,110
+North Milwaukee WI,43.084,-87.950,110,9.5,4.2,130

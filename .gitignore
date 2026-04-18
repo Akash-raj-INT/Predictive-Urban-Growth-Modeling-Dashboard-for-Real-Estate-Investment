@@ -1,0 +1,38 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.sqlite3-journal
+media/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VS Code
+.vscode/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Temporary git files created during tooling
+git_status.txt
+git_status_ascii.txt
+git_remote.txt
