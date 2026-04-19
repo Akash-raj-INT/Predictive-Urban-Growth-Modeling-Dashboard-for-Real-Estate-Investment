@@ -3,5 +3,5 @@ services:
     name: urban-growth
     env: python
     plan: starter
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
     startCommand: python -m gunicorn urban_growth.wsgi:application
