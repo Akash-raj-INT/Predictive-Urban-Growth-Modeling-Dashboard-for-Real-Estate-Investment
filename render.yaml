@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: urban-growth
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m gunicorn urban_growth.wsgi:application
