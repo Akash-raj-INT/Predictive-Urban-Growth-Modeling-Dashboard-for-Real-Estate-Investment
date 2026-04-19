@@ -3,6 +3,7 @@ Django settings for urban_growth project.
 """
 import os
 from pathlib import Path
+from urllib.parse import urlparse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,7 +11,23 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-urban-growth-dashbo
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',')
+# Parse allowed hosts, including Render deployment domains.
+allowed_hosts = {
+    host.strip()
+    for host in os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+    if host.strip()
+}
+
+render_external_url = os.getenv('RENDER_EXTERNAL_URL')
+if render_external_url:
+    parsed_render_host = urlparse(render_external_url).netloc or render_external_url
+    allowed_hosts.add(parsed_render_host.split(':')[0].strip())
+
+render_external_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
+if render_external_hostname:
+    allowed_hosts.add(render_external_hostname.strip())
+
+ALLOWED_HOSTS = sorted(allowed_hosts)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
